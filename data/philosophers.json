@@ -1,12 +1,12 @@
 {
   "regions": [
-    { "id": "greco-roman", "name": "Ancient Greece & Rome", "name_zh": "古希腊罗马", "color": "#4A7FB5", "order": 0 },
-    { "id": "medieval", "name": "Medieval Europe", "name_zh": "中世纪欧洲", "color": "#8B7355", "order": 1 },
-    { "id": "islamic", "name": "Islamic World", "name_zh": "伊斯兰世界", "color": "#2E8B57", "order": 2 },
-    { "id": "china", "name": "China", "name_zh": "中国", "color": "#C75050", "order": 3 },
-    { "id": "india", "name": "India", "name_zh": "印度", "color": "#D4882A", "order": 4 },
-    { "id": "early-modern", "name": "Early Modern Europe", "name_zh": "近代欧洲", "color": "#7B68A0", "order": 5 },
-    { "id": "modern-west", "name": "Modern Western", "name_zh": "现代西方", "color": "#4682B4", "order": 6 }
+    { "id": "greco-roman",  "name": "Greco-Roman",         "name_zh": "古希腊罗马", "color": "#5d6b3d", "numeral": "I",   "order": 0 },
+    { "id": "medieval",     "name": "Medieval Europe",     "name_zh": "中世纪欧洲", "color": "#2e3d6b", "numeral": "II",  "order": 1 },
+    { "id": "islamic",      "name": "Islamic World",       "name_zh": "伊斯兰世界", "color": "#1f5d5d", "numeral": "III", "order": 2 },
+    { "id": "china",        "name": "China",               "name_zh": "中国",       "color": "#a8261c", "numeral": "IV",  "order": 3 },
+    { "id": "india",        "name": "India",               "name_zh": "印度",       "color": "#c28225", "numeral": "V",   "order": 4 },
+    { "id": "early-modern", "name": "Early Modern Europe", "name_zh": "近代欧洲",   "color": "#5d2d5b", "numeral": "VI",  "order": 5 },
+    { "id": "modern-west",  "name": "Modern Western",      "name_zh": "现代西方",   "color": "#3d4d5d", "numeral": "VII", "order": 6 }
   ],
   "philosophers": [
     {

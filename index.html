@@ -3,35 +3,75 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>PhiloMap -- World Philosophy Timeline</title>
+  <title>PhiloMap — A Topography of World Philosophy</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT,WONK@0,9..144,300..900,0..100,0..1;1,9..144,300..900,0..100,0..1&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <div class="grain"></div>
+
   <header id="header">
-    <h1>PhiloMap</h1>
-    <p class="subtitle">An Interactive Timeline of World Philosophy</p>
+    <div class="masthead">
+      <div class="logotype">
+        <span class="logo-main">Philo<span class="dot">·</span>Map</span>
+      </div>
+      <div class="masthead-meta">
+        <div class="kicker">A Topography of World Philosophy</div>
+        <div class="issue">
+          <span class="issue-vol">Vol. I</span>
+          <span class="issue-sep">⁘</span>
+          <span class="issue-range">DCXXIV BCE — MMXXVI CE</span>
+        </div>
+      </div>
+    </div>
+
     <div class="controls">
-      <div class="zoom-controls">
-        <button id="zoom-in" title="Zoom in">+</button>
-        <button id="zoom-reset" title="Reset zoom">Reset</button>
-        <button id="zoom-out" title="Zoom out">&minus;</button>
+      <div class="zoom-controls" role="group" aria-label="Zoom">
+        <button id="zoom-out" title="Zoom out" aria-label="Zoom out">−</button>
+        <button id="zoom-reset" title="Reset view">Reset</button>
+        <button id="zoom-in" title="Zoom in" aria-label="Zoom in">+</button>
       </div>
-      <div class="lang-toggle">
-        <button id="lang-btn" title="Toggle language">EN / ZH</button>
-      </div>
+      <button id="lang-btn" class="lang-toggle" title="Toggle language" aria-label="Toggle language">
+        <span class="lang-en active">EN</span>
+        <span class="lang-sep">/</span>
+        <span class="lang-zh">中</span>
+      </button>
     </div>
   </header>
 
   <div id="timeline-container">
-    <svg id="timeline"></svg>
+    <svg id="timeline" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <filter id="paper-grain">
+          <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" seed="3"/>
+          <feColorMatrix values="0 0 0 0 0.1
+                                  0 0 0 0 0.09
+                                  0 0 0 0 0.08
+                                  0 0 0 0.04 0"/>
+        </filter>
+      </defs>
+    </svg>
   </div>
 
-  <div id="detail-panel" class="hidden">
-    <button id="detail-close">&times;</button>
+  <aside id="detail-panel" class="hidden" aria-hidden="true">
+    <button id="detail-close" aria-label="Close">×</button>
+    <div class="detail-folio">No. <span id="detail-folio-num">—</span></div>
     <div id="detail-content"></div>
-  </div>
+  </aside>
 
-  <div id="tooltip" class="hidden"></div>
+  <div id="tooltip" class="hidden" role="tooltip"></div>
+
+  <footer class="colophon">
+    <span class="colo-item">D3.js × Static</span>
+    <span class="colo-sep">⁘</span>
+    <span class="colo-item">Hover to trace influence</span>
+    <span class="colo-sep">⁘</span>
+    <span class="colo-item">Click for full entry</span>
+  </footer>
 
   <script src="https://d3js.org/d3.v7.min.js"></script>
   <script type="module" src="app.js"></script>
