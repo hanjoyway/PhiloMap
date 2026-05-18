@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PhiloMap -- World Philosophy Timeline</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header id="header">
+    <h1>PhiloMap</h1>
+    <p class="subtitle">An Interactive Timeline of World Philosophy</p>
+    <div class="controls">
+      <div class="zoom-controls">
+        <button id="zoom-in" title="Zoom in">+</button>
+        <button id="zoom-reset" title="Reset zoom">Reset</button>
+        <button id="zoom-out" title="Zoom out">&minus;</button>
+      </div>
+      <div class="lang-toggle">
+        <button id="lang-btn" title="Toggle language">EN / ZH</button>
+      </div>
+    </div>
+  </header>
+
+  <div id="timeline-container">
+    <svg id="timeline"></svg>
+  </div>
+
+  <div id="detail-panel" class="hidden">
+    <button id="detail-close">&times;</button>
+    <div id="detail-content"></div>
+  </div>
+
+  <div id="tooltip" class="hidden"></div>
+
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+  <script type="module" src="app.js"></script>
+</body>
+</html>

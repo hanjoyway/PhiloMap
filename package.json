@@ -1,0 +1,10 @@
+{
+  "name": "philomap",
+  "version": "0.1.0",
+  "description": "Interactive world philosophy timeline visualization",
+  "scripts": {
+    "dev": "npx serve .",
+    "build": "echo 'Static site - no build needed'"
+  },
+  "devDependencies": {}
+}
